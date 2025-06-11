@@ -1,0 +1,31 @@
+# Dynamic To-Do List (JavaScript)
+
+A simple dynamic to-do list application built with JavaScript.
+
+## Features
+
+- Add new tasks
+- Mark tasks as completed
+- Delete tasks
+- Persistent storage using localStorage
+
+## Getting Started
+
+1. Clone the repository.
+2. Open `index.html` in your browser.
+
+## File Structure
+
+- `index.html` - Main HTML file
+- `style.css` - Stylesheet
+- `app.js` - JavaScript logic
+
+## Usage
+
+- Enter a task in the input field and click "Add".
+- Click on a task to mark it as completed.
+- Click the delete button to remove a task.
+
+## License
+
+MIT
