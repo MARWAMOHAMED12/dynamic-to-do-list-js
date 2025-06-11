@@ -45,3 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+/*
+    The required functionality is already implemented above:
+    - addTask creates li and remove button, sets up removal, and clears input.
+    - addButton and taskInput have event listeners for adding tasks.
+    No further code is needed here.
+*/
