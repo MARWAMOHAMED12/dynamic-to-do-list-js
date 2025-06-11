@@ -1,14 +1,14 @@
 // Run the script after the HTML content is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
 
-    // Select DOM elements
+   
     const addButton = document.getElementById('add-task');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
 
     // Function to add a new task
     function addTask() {
-        const taskText = taskInput.value.trim(); // Get the input and remove extra spaces
+        const taskText = taskInput.value.trim(); 
 
         if (taskText === "") {
             alert("Please enter a task."); // Alert if input is empty
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add task when clicking the "Add Task" button
     addButton.addEventListener('click', addTask);
+
 
     // Allow adding task by pressing "Enter"
     taskInput.addEventListener('keypress', function (event) {
