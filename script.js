@@ -1,54 +1,48 @@
-// انتظر لما الصفحة تتحمل بالكامل
 document.addEventListener("DOMContentLoaded", function () {
+    // Select DOM elements
     const addButton = document.getElementById("add-task-btn");
     const taskInput = document.getElementById("task-input");
     const taskList = document.getElementById("task-list");
 
-    // دالة لإضافة مهمة
+    // Function to add a task
     function addTask() {
         const taskText = taskInput.value.trim();
 
+        // Check if task is not empty
         if (taskText === "") {
             alert("Please enter a task.");
             return;
         }
 
-        // إنشاء العنصر <li> للمهمة
+        // Create li element
         const li = document.createElement("li");
         li.textContent = taskText;
 
-        // زر الحذف
+        // Create remove button
         const removeBtn = document.createElement("button");
         removeBtn.textContent = "Remove";
         removeBtn.className = "remove-btn";
 
-        // عند الضغط على زر الحذف، امسح المهمة
+        // On click, remove the task
         removeBtn.onclick = function () {
             taskList.removeChild(li);
         };
 
-        // ضيف الزر للمهمة، وضيف المهمة للقائمة
+        // Append button and task to list
         li.appendChild(removeBtn);
         taskList.appendChild(li);
 
-        // فضي خانة الإدخال
+        // Clear input
         taskInput.value = "";
     }
 
-    // لما نضغط على زر "Add Task"
+    // Event listener for Add Task button
     addButton.addEventListener("click", addTask);
 
-    // لما نضغط Enter في خانة الإدخال
+    // Event listener for Enter key
     taskInput.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             addTask();
         }
     });
 });
-/*
-    The required functionality is already implemented above:
-    - addTask creates li and remove button, sets up removal, and clears input.
-    - addButton and taskInput have event listeners for adding tasks.
-    No further code is needed here.
-*/
-/* All required functionality is already implemented above as described in the task. No additional code is needed here. */
